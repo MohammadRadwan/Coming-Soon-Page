@@ -1,0 +1,50 @@
+@import '../helpers/_variables.scss';
+
+// Footer
+footer {
+  background: $footerBack;
+  @media #{$maxLarge} { margin-top: 20px; }
+  .info {
+    display: $flex;
+    align-items: $textCenter;
+    padding: 20px 0;
+    // Social links
+    .social {
+      ul {
+        display: $flex;
+        margin: 0;
+        @media #{$maxExtraSmall} { justify-content: $textCenter; margin-bottom: 10px; }
+        li {
+          a { 
+            padding: 0 10px;     
+            font-size: 24px;
+            color: $whiteColor;
+          }
+          .btn-fb { &:hover { color: $facebook; } }
+          .btn-in { &:hover { color: $instagram; } }
+          .btn-lc { &:hover { color: $location; } }
+        }
+      }
+    }
+    // Copyrights
+    .copyright {
+      text-align: $textEnd;
+      color: $whiteColor;
+      margin: 0;
+      @media #{$maxMedium} { font-size: 14px; }
+      @media #{$maxSmall} { text-align: $textCenter; }
+      i {
+        position: $relative;
+        top: 3px;
+        color: $heartColor;
+        font-size: 22px;
+      }
+      a { 
+        color: $whiteColor; 
+        text-decoration: $none;
+        @media #{$maxSmall} { display: $inline-block; }
+      }
+      strong { color: $nameColor; }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+// Start Media Queries
+/* Max */
+$maxXXSmall: (max-width: 481px);
+$maxExtraSmall: (max-width: 576px);
+$maxSmall: (max-width: 767px);
+$maxMedium: (max-width: 992px);
+$maxLarge: (max-width: 1200px);
+
+/* Min */
+$minXXSmall: (min-width: 482px);
+$minExtraSmall: (min-width: 577px);
+$minSmall: (min-width: 768px);
+$minMedium: (min-width: 993px);
+$minLarge: (min-width: 1200px);
+
+$mixMeduim-Large: (min-width: 993px) and (max-width: 1199px);
+$mixSmallMeduim: (min-width: 768px) and (max-width: 992px);
+// End Media Queries
+
+/* Colors */
+$whiteColor: #fff;
+$lightWhiteColor: #faf6fb;
+$pColor: #d0d0d0;
+$facebook: #3b5998;
+$instagram: #E1306C;
+$location: #56b68b;
+$nameColor: #1ca9ff;
+$heartColor: #f00;
+$submit: #2196F3;
+$contactColor: rgba(0,0,0, .3);
+$footerBack: rgba(0,0,0,.5);
+$overlayColor: linear-gradient(to right, rgba(29, 47, 88, 0.8), rgba(0, 20, 41, 0));
+$titleColor: linear-gradient(90deg, #568beb, $whiteColor, #dadada);
+
+/* Align */
+$textStart: start;
+$textEnd: end;
+$textCenter: center;
+$base: baseline;
+
+/* Position */
+$relative: relative;
+$absolute: absolute;
+$fixed: fixed;
+
+/* Background size */
+$cover: cover;
+$contain: contain;
+$repeat: repeat;
+$noRepeat: no-repeat;
+
+/* Display */
+$block: block;
+$inline-block: inline-block;
+$flex: flex;
+$inline-flex: inline-flex;
+$none: none;
+
+/* Text */
+$uppercase: uppercase;
+$capitalize: capitalize;

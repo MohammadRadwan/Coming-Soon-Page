@@ -1,0 +1,184 @@
+// Start Import
+@import '../helpers/_variables.scss';
+@import '../helpers/_mixins.scss';
+// End Import
+
+// Start Font
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.eot');
+  src: url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Lato-Regular.woff2') format('woff2'),
+      url('fonts/Lato-Regular.woff') format('woff'),
+      url('fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+// End Font
+
+// Body
+body {
+  font-family: Roboto, sans-serif;
+  position: $relative;
+  background: url('../images/image2.jpg') $noRepeat $textCenter $textCenter $fixed;
+  background-size: $cover; 
+  // Overlay
+  .overlay {
+    @include overlay;
+    position: $fixed;
+    background: $overlayColor;
+  }
+  // White dots
+  .background-dots {
+    background: url('../images/pattern-white.svg') $repeat;
+    position: $fixed;
+    height: 100%;
+    width: 100%;
+    opacity: .2;
+    z-index: 0;
+  }
+  #particles-js { @include overlay; }
+  // Content
+  .content {
+    margin: 150px 0 0;
+    @media #{$maxExtraSmall} { margin: 110px 0 0; }
+    .head {
+      font-family: 'Lato',sans-serif;
+      margin: 20px 0 30px;
+      @media #{$maxMedium} { margin: 20px 0 45px; }
+      // Title
+      h1 {
+        font-size: 70px !important;
+        font-weight: 900;
+        @media #{$maxMedium} { font-size: 63px !important; }
+        @media #{$maxXXSmall} { font-size: 50px !important; }
+      }
+      // Coming soon
+      .title {
+        animation: animate 3s linear infinite;
+        background: $titleColor $noRepeat;
+        background-size: 80%;
+        background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      }
+      // Gjeans
+      .name {
+        @media #{$maxMedium} { display: $none; }
+      }
+      // Description
+      .subtitle {
+        padding-left: 10px;
+        color: $pColor;
+        font-family: 'Lato',sans-serif;
+        font-size: 20px;
+        @media #{$maxMedium} { font-size: 18px; }
+        @media #{$maxExtraSmall} { font-size: 16px; }
+      }
+    }
+    // Form
+    .form {
+      margin-top: 38px;
+      form {
+        .form-group {
+          @media #{$maxXXSmall} { width: 100%; }
+          input {
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 45px;
+            width: 300px !important;
+            font-size: 15px;
+            @media #{$maxExtraSmall} { display: inline-block; }
+            @media #{$maxXXSmall} { width: 100% !important; }
+          }
+          button {
+            border-radius: 10px;
+            height: auto;
+            border: 0;
+            padding: 12px 20px;
+            font-size: 14px;
+            text-transform: $capitalize;
+            background: $submit;
+            margin: 50px 0;
+            @media #{$maxXXSmall} { width: 100%; margin: 20px 0; }
+          }
+        }
+      }
+    }
+    // Social links
+    .social-buttons {
+      ul {
+        display: $flex;
+        margin: 0;
+        @media #{$maxXXSmall} { display: block !important; }
+        li {
+          margin-right: 20px;
+          @media #{$minXXSmall} { margin-right: 15px; }
+          @media #{$maxXXSmall} { margin: 20px 0; }
+          button {
+            font-family: Roboto,sans-serif;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            border-radius: 5px;
+            margin-right: 15px;
+            width: 100%;
+            a { 
+              color: $whiteColor;
+              text-decoration: $none;
+              font-size: 14px;
+              i {
+                margin-right: 10px;
+                position: $relative;
+                top: 3px;
+                font-size: 22px;
+              }
+            }
+          }  
+        }
+        .btn-fb { background-color: $facebook; }
+        .btn-in { background-color: $instagram; }
+        .btn-lc { background-color: $location; }
+      }
+    }
+    // Contact Info
+    .contact-info {
+      margin: 85px 0 30px;
+      @media #{$maxLarge} { margin-top: 65px; }
+      @media #{$maxMedium} { margin-top: 70px; } 
+      @media #{$maxSmall} { margin-bottom: 22px; }
+      ul {
+        width: 400px;
+        color: $whiteColor;
+        font-size: 17px;
+        background: $contactColor;
+        padding: 15px 10px;
+        border-radius: 10px;
+        @media #{$maxXXSmall} { width: auto; }
+        li {
+          margin: 0 10px;
+          &:first-of-type { margin-bottom: 10px }
+          .left {
+            width: 85px;
+            display: $inline-flex;
+            align-items: $base;
+            @media #{$maxExtraSmall} { width: 40px; }
+            i {
+              font-size: 20px;
+              vertical-align: $base;
+              width: 27px;
+            }
+            label {
+              font-weight: 500;
+              @media #{$maxXXSmall} { display: $none; }
+            }
+          }
+          span { color: $lightWhiteColor; position: $relative; }
+          #email { top: -1px; }
+        }
+      }
+    }
+  }
+}
+
+// Animation
+* i { animation: heart-beat 1.5s infinite ease-in-out; transition: .5s; }
+@keyframes heart-beat { 0%, 100% { transform: scale(.9) } 50% { transform: scale(1) } }
+@keyframes animate { 0% { background-position: -500% } 100% { background-position: 500% } }
