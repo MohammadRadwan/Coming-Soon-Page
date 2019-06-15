@@ -1,4 +1,4 @@
-# Coming-Soon-Page-2019
+# Coming-Soon-Page
 
 ## Technologies Used:
 
